@@ -2,21 +2,21 @@ const out = function (...str) {console.log(...str)}
 
 out("Vi er klar til at sætte farven.");
 
-const bdy = document.querySelector("body");
-out(bdy);
+const body = document.querySelector("body");
+out(body);
 
-const pbCol = document.querySelector(".pbSetColor");
-const inColor = document.querySelector(".getColor");
+const pushbuttonColor = document.querySelector(".pbSetColor");
+const inputColor = document.querySelector(".getColor");
 
 
-pbCol.textContent = "Tryk mig for at ændre farve";
+pushbuttonColor.textContent = "Tryk mig for at ændre farve";
 
-//lav funktion til eventhandler
+//lav funktion til eventlistener
 function changeColor() {
-  const col = inColor.value;
+  const col = inputColor.value;
   out(col);
-  bdy.style.backgroundColor = col;
+  body.style.backgroundColor = col;
 }
 
-pbCol.addEventListener("click", changeColor);
+pushbuttonColor.addEventListener("click", changeColor);
 
